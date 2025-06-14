@@ -1,0 +1,175 @@
+C:.
+¦   .gitignore
+¦   app.vue
+¦   file-tree.txt
+¦   nuxt.config.ts
+¦   package-lock.json
+¦   package.json
+¦   postcss.config.mjs
+¦   README.md
+¦   tsconfig.json
+¦   
++---.data
+¦   +---content
+¦           contents.sqlite
+¦           
++---.nuxt
+¦   ¦   app.config.mjs
+¦   ¦   component-chunk.mjs
+¦   ¦   components.d.ts
+¦   ¦   imports.d.ts
+¦   ¦   mdc-configs.mjs
+¦   ¦   mdc-highlighter.mjs
+¦   ¦   mdc-image-component.mjs
+¦   ¦   mdc-imports.mjs
+¦   ¦   nitro.json
+¦   ¦   nuxt-fonts-global.css
+¦   ¦   nuxt-icon-client-bundle.mjs
+¦   ¦   nuxt-icon-server-bundle.mjs
+¦   ¦   nuxt.d.ts
+¦   ¦   nuxt.json
+¦   ¦   tsconfig.json
+¦   ¦   tsconfig.server.json
+¦   ¦   ui-image-component.ts
+¦   ¦   ui.css
+¦   ¦   
+¦   +---content
+¦   ¦       components.ts
+¦   ¦       database.compressed.mjs
+¦   ¦       manifest.ts
+¦   ¦       sql_dump.txt
+¦   ¦       types.d.ts
+¦   ¦       
+¦   +---dev
+¦   ¦       index.mjs
+¦   ¦       index.mjs.map
+¦   ¦       
+¦   +---dist
+¦   ¦   +---server
+¦   ¦           client.manifest.json
+¦   ¦           client.manifest.mjs
+¦   ¦           server.mjs
+¦   ¦           
+¦   +---manifest
+¦   ¦   ¦   latest.json
+¦   ¦   ¦   
+¦   ¦   +---meta
+¦   ¦           8bda1d60-900a-4526-aabe-9722be4e755b.json
+¦   ¦           dev.json
+¦   ¦           
+¦   +---schema
+¦   ¦       nuxt.schema.d.ts
+¦   ¦       nuxt.schema.json
+¦   ¦       
+¦   +---types
+¦   ¦       app-defaults.d.ts
+¦   ¦       app.config.d.ts
+¦   ¦       build.d.ts
+¦   ¦       builder-env.d.ts
+¦   ¦       imports.d.ts
+¦   ¦       layouts.d.ts
+¦   ¦       middleware.d.ts
+¦   ¦       nitro-config.d.ts
+¦   ¦       nitro-imports.d.ts
+¦   ¦       nitro-middleware.d.ts
+¦   ¦       nitro-nuxt.d.ts
+¦   ¦       nitro-routes.d.ts
+¦   ¦       nitro.d.ts
+¦   ¦       plugins.d.ts
+¦   ¦       schema.d.ts
+¦   ¦       ui.d.ts
+¦   ¦       vue-shim.d.ts
+¦   ¦       
+¦   +---ui
+¦           accordion.ts
+¦           alert.ts
+¦           avatar-group.ts
+¦           avatar.ts
+¦           badge.ts
+¦           breadcrumb.ts
+¦           button-group.ts
+¦           button.ts
+¦           calendar.ts
+¦           card.ts
+¦           carousel.ts
+¦           checkbox-group.ts
+¦           checkbox.ts
+¦           chip.ts
+¦           collapsible.ts
+¦           color-picker.ts
+¦           command-palette.ts
+¦           container.ts
+¦           context-menu.ts
+¦           drawer.ts
+¦           dropdown-menu.ts
+¦           form-field.ts
+¦           form.ts
+¦           index.ts
+¦           input-menu.ts
+¦           input-number.ts
+¦           input.ts
+¦           kbd.ts
+¦           link.ts
+¦           modal.ts
+¦           navigation-menu.ts
+¦           pagination.ts
+¦           pin-input.ts
+¦           popover.ts
+¦           progress.ts
+¦           radio-group.ts
+¦           select-menu.ts
+¦           select.ts
+¦           separator.ts
+¦           skeleton.ts
+¦           slideover.ts
+¦           slider.ts
+¦           stepper.ts
+¦           switch.ts
+¦           table.ts
+¦           tabs.ts
+¦           textarea.ts
+¦           toast.ts
+¦           toaster.ts
+¦           tooltip.ts
+¦           tree.ts
+¦           
++---.output
+¦   +---public
++---assets
++---components
+¦       Footer.vue
+¦       Navbar.vue
+¦       PostCard.vue
+¦       ProjectCard.vue
+¦       SocialLinks.vue
+¦       Tag.vue
+¦       
++---composables
++---content
+¦   +---blog
+¦           meu-primeiro-post.md
+¦           
++---layouts
+¦       blog.vue
+¦       default.vue
+¦       
++---pages
+¦   ¦   blog.vue
+¦   ¦   index.vue
+¦   ¦   projects.vue
+¦   ¦   
+¦   +---blog
+¦           index.vue
+¦           [slug].vue
+¦           
++---public
+¦   ¦   favicon.ico
+¦   ¦   robots.txt
+¦   ¦   
+¦   +---images
+¦           blog.png
+¦           kanban.png
+¦           
++---server
+        tsconfig.json
+        
