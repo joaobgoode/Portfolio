@@ -1,19 +1,11 @@
 <template>
-  <nav class="flex items-center justify-between p-4 bg-white shadow-md">
-    <NuxtLink to="/" class="text-2xl font-bold">MeuPortfólio</NuxtLink>
-    <ul class="flex gap-6">
-      <li>
-        <NuxtLink to="/">Home</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/projects">Projetos</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/blog">Blog</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/about">Sobre</NuxtLink>
-      </li>
-    </ul>
-  </nav>
+  <header class="py-4 border-b border-gray-200 dark:border-gray-700">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <NuxtLink to="/" class="text-2xl font-bold">Meu Portfólio</NuxtLink>
+      <nav class="flex gap-4 sm:gap-6">
+        <NuxtLink to="/projects" class="hover:text-gray-600 dark:hover:text-gray-300">Projetos</NuxtLink>
+        <NuxtLink to="/blog" class="hover:text-gray-600 dark:hover:text-gray-300">Blog</NuxtLink>
+      </nav>
+    </div>
+  </header>
 </template>
