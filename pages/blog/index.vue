@@ -4,6 +4,11 @@ import PostCard from '~/components/PostCard.vue'
 const { data: posts } = await useAsyncData('home-posts', () => {
   return queryCollection('post').order('date', 'DESC').limit(2).all();
 })
+
+const { data: projects } = await useAsyncData('home-projects', () => {
+  return queryCollection('project').where("starred", "=", "true").limit(2).all();
+})
+
 </script>
 
 <template>
@@ -16,8 +21,9 @@ const { data: posts } = await useAsyncData('home-posts', () => {
     </p>
 
     <div class="grid gap-8 md:grid-cols-2">
-      <PostCard v-for="post in posts" :key="post.path" :title="post.title" :description="post.description"
-        :date="post.date" :slug="post.path.substring(6)" :tags="post.tags" />
+      <ProjectCard v-for="project in projects" :key="project.id || project.title" :title="project.title"
+        :description="project.description" :link="project.link" :link-text="project.linkText" :link2="project.link2"
+        :link-text2="project.linkText2" :image="project.image" :tags="project.tags" />
     </div>
 
   </div>

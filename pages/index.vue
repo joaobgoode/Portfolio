@@ -3,20 +3,9 @@ import ProjectCard from '~/components/ProjectCard.vue'
 import PostCard from '~/components/PostCard.vue'
 import SocialLinks from '~/components/SocialLinks.vue'
 
-const projects = [
-  {
-    title: 'Kanban TUI',
-    description: 'Aplicativo de Kanban feito em terminal usando Go e Bubble Tea.',
-    image: '/images/kanban.png',
-    link: 'https://github.com/seuusuario/kanban-tui'
-  },
-  {
-    title: 'Blog em Nuxt',
-    description: 'Blog pessoal construído com Nuxt 3 e hospedado no GitHub Pages.',
-    image: '/images/blog.png',
-    link: 'https://seuusuario.github.io/blog'
-  }
-]
+const { data: projects } = await useAsyncData('home-projects', () => {
+  return queryCollection('project').where('starred', '=', '1').limit(2).all();
+})
 
 const { data: posts } = await useAsyncData('home-posts', () => {
   return queryCollection('post').order('date', 'DESC').limit(2).all();
@@ -38,7 +27,9 @@ const { data: posts } = await useAsyncData('home-posts', () => {
     <section class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold mb-6">Projetos em Destaque</h2>
       <div class="grid gap-8 md:grid-cols-2">
-        <ProjectCard v-for="project in projects" :key="project.title" v-bind="project" />
+        <ProjectCard v-for="project in projects" :key="project.id || project.title" :title="project.title"
+          :description="project.description" :link="project.link" :link-text="project.linkText" :link2="project.link2"
+          :link-text2="project.linkText2" :image="project.image" :tags="project.tags" />
       </div>
       <div class="text-center mt-6">
         <NuxtLink to="/projects" class="text-blue-500 hover:underline">
