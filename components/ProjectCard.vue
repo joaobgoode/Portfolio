@@ -9,13 +9,13 @@ defineProps({
   image: String,
   tags: Array,
 })
-
+const base = useRuntimeConfig().app.baseURL
 
 </script>
 
 <template>
   <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-    <img v-if="image" :src="image" :alt="title" class="w-full h-48 object-cover" />
+    <img v-if="image" :src="`${base}${image}`" :alt="title" class="w-full h-48 object-cover" />
     <div class="p-4">
       <h2 class="text-xl font-semibold mb-2">{{ title }}</h2>
       <p class="text-sm mb-3 leading-relaxed">{{ description }}</p>
